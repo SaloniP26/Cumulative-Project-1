@@ -1,0 +1,26 @@
+﻿@model Cumulative_Project.Models.Class
+@{
+    ViewBag.Title = "Show";
+}
+
+<h1>@Model.ClassId @Model.ClassName</h1>
+<p class="caption">Classes</p>
+<hr />
+
+<h2>General Information</h2>
+<table class="table">
+    <tr>
+        <th>Class Code</th>
+        <th>Teacher Id</th>
+        <th>Start Date</th>
+        <th>Finish Date</th>
+    </tr>
+    <tr>
+        <td>@Model.ClassCode</td>
+        <td>@Model.ClassId</td>
+        <td>@Model.StartDate</td>
+        <td>@Model.FinishDate</td>
+    </tr>
+</table>
+
+<a class="navlink" href="/Class/List">Back</a>

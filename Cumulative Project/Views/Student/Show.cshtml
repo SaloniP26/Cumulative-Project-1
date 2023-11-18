@@ -1,0 +1,24 @@
+﻿@model Cumulative_Project.Models.Student
+@{
+    ViewBag.Title = "Show";
+}
+
+<h1>@Model.FirstName @Model.LastName</h1>
+<p class="caption">Student</p>
+<hr />
+
+<h2>General Information</h2>
+<table class="table">
+    <tr>
+        <th>Student Id</th>
+        <th>Student Number</th>
+        <th>Enroll Date</th>
+    </tr>
+    <tr>
+        <td>@Model.StudentId</td>
+        <td>@Model.StudentNumber</td>
+        <td>@Model.EnrolDate</td>
+    </tr>
+</table>
+
+<a class="navlink" href="/Student/List">Back</a>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Cumulative_Project.Models.Student>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>
+                    @Html.ActionLink("Details", "Show", new { id = student.StudentId }) |
+                    @* Add other action links as needed (e.g., Edit, Delete) *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

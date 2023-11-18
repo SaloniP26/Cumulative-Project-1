@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Cumulative_Project.Models.Class>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Id</th>
+            <th>Class Code</th>
+            <th>Class Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ClassId</td>
+                <td>@item.ClassCode</td>
+                <td>@item.ClassName</td>
+                <td>
+                    @Html.ActionLink("Details", "Show", new { id = item.ClassId }) |
+                    @* Add other action links as needed (e.g., Edit, Delete) *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
